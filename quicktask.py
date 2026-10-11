@@ -20,3 +20,13 @@ def add_task(title):
     next_task_id += 1
 
     print(f"Task added successfully: {task['title']}")
+
+
+def delete_task(task_id):
+    for task in tasks:
+        if task["id"] == task_id:
+            tasks.remove(task)
+            print(f"Task {task_id} deleted successfully.")
+            return
+
+    print(f"Error: Task with ID {task_id} does not exist.")
