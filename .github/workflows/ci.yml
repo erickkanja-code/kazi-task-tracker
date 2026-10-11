@@ -26,6 +26,9 @@ jobs:
       - name: Install Poetry
         run: pipx install poetry
 
+      - name: Set up pipx
+        uses: pypa/setup-pipx@v4
+        
       - name: Install dependencies
         run: poetry install --with dev --no-root
 
